@@ -25,9 +25,8 @@ def crawling(url):
 
     try:
         soup = BeautifulSoup(req.content, "html.parser")
-        trs = soup.find("div", {"id":"contents"})
-        """for tr in trs:
-            print(tr)
+        trs = soup.find("div", {"id":"contents"}).find("tbody").find_all('tr')
+        for tr in trs:
             tds = tr.find_all('td')
             if tds[1].find('img') is not None:
                 message += tds[2].get_text() + " / "
@@ -39,7 +38,7 @@ def crawling(url):
                     message += tds[2].get_text() + " / "
                     message += tds[3].get_text() + " / "
                     message += tds[5].get_text() + "\n"
-        """
+
 
         if message == "":
             message = "no new contents\n"
