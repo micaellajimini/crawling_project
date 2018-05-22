@@ -2,19 +2,30 @@ import requests
 from datetime import date, timedelta
 from bs4 import BeautifulSoup
 
+from config import userid, passwd
+
+login_url = "https://job.sogang.ac.kr/ajax/common/loginproc.aspx"
+
+session = requests.session()
+
+parameters = dict()
+parameters['userid'] = userid
+parameters['passwd'] = passwd
+
+res = session.post(login_url, data=parameters)
+res.raise_for_status()
+
+
 url = "https://job.sogang.ac.kr/jobs/sogang/intern/default.aspx?page=1"
 message = ""
 
 def crawling(url):
     global message
-    req = requests.get(url)
+    req = session.get(url)
 
     try:
-        if not req.ok:
-            return "url error!"
         soup = BeautifulSoup(req.content, "html.parser")
         trs = soup.find("div", {"id":"contents"})
-        print(trs)
         """for tr in trs:
             print(tr)
             tds = tr.find_all('td')
