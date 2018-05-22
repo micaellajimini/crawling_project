@@ -65,4 +65,7 @@ if result2 == error_mes:
 else:
     result += result2
 
-print(result)
+if result == "":
+    print("no recent notices")
+else:
+    print(result)
