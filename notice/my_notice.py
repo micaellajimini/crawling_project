@@ -38,15 +38,15 @@ class PushNote(object):
                 if tds[1].find('img') is not None:
                     message += tds[2].get_text() + " / "
                     message += tds[3].get_text() + " / "
-                    message += tds[5].get_text() + "\n"
+                    message += tds[5].get_text() + "\n\n"
                 else:
                     # 어제오늘 새로운 뉴스를 알려줌 - 하루에 한번씩 알람뜨게 할 예정
                     yesterday = date.today() - timedelta(1)
-                    if tds[1].get_text() == yesterday.strftime('%Y-%m-%d') or tds[
-                        1].get_text() == date.today().strftime('%Y-%m-%d'):
+                    if tds[1].get_text() == yesterday.strftime('%Y-%m-%d') or \
+                                    tds[1].get_text() == date.today().strftime('%Y-%m-%d'):
                         message += tds[2].get_text() + " / "
                         message += tds[3].get_text() + " / "
-                        message += tds[5].get_text() + "\n"
+                        message += tds[5].get_text() + "\n\n"
 
             return message
 
@@ -70,5 +70,5 @@ class PushNote(object):
             else:
                 pb.push_note(u"Internship notices",result)
 
-            time.sleep(60)
+            time.sleep(48600)
 
