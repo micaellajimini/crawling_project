@@ -12,7 +12,6 @@
 ## REQUIREMENTS?  
 
 pushbullet  
-time  
 requests  
 datetime  
 bs4    
@@ -23,15 +22,16 @@ bs4
 userid="자신의 saint아이디"  
 passwd="자신의 saint비번"
 ```
-
-
+  
+*설치된 모듈 버전 확인*
+`pip freeze`
 
 ## HOW CAN I USE IT?  
 
 *사실은... 패키지로 만들고 싶었는데.. 그건 좀 더 노력을 해보는 것으로...*  
 *git clone을 한다거나... 한다거나...ㅎ......*  
 
-example.py 에다가 자신의 access_token [^1] 을 입력하면 끝~  
+example.py 에다가 자신의 access_token[^1] 을 입력하면 끝~  
 
 ---
 [^1]: [Pushbullet](https://www.pushbullet.com)을 까셔야 알림을 받아용....  
