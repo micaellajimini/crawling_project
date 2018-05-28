@@ -103,5 +103,6 @@ venv.bak/
 # my private things
 config.py
 .idea
+example/*
 
 # End of https://www.gitignore.io/api/python
