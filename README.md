@@ -3,7 +3,7 @@
 ## WHAT IS THIS?  
 
 계획만 하던 프로젝트를 드디어 진행해보았다-  
-**"나레기 인턴 하고싶다-"**에서 시작해서  
+**"나레기 인턴 하고싶다-"** 에서 시작해서  
 인턴 정보를 주기적으로 알림받고 싶었다:)
 >**결론은 학교 홈페이지에 뜨는 인턴 정보를 주기적으로 알림해주는 프로그램**      
 
@@ -11,10 +11,10 @@
 
 ## REQUIREMENTS?  
 
-pushbullet
-time
-requests
-datetime
+pushbullet  
+time  
+requests  
+datetime  
 bs4    
 
 
