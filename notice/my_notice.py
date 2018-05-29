@@ -3,7 +3,7 @@ import time
 import requests
 from datetime import date, timedelta
 from bs4 import BeautifulSoup
-# 내 id와 pw는 소중하니까
+# id, pw is important
 from config import userid, passwd
 
 
@@ -27,7 +27,7 @@ class PushNote(object):
         message = ""
 
         try:
-            # 이제 로그인 이후에 접근할 수 있는 페이지를 접근할 수 있다
+            # can access page after login
             req = self.session.get(url)
             req.raise_for_status()
 
@@ -40,7 +40,7 @@ class PushNote(object):
                     message += tds[3].get_text() + " / "
                     message += tds[5].get_text() + "\n\n"
                 else:
-                    # 어제오늘 새로운 뉴스를 알려줌 - 하루에 한번씩 알람뜨게 할 예정
+                    # recent notices(yesterday, today) / one time in a day
                     yesterday = date.today() - timedelta(1)
                     if tds[1].get_text() == yesterday.strftime('%Y-%m-%d') or \
                                     tds[1].get_text() == date.today().strftime('%Y-%m-%d'):
