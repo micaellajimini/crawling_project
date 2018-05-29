@@ -31,7 +31,7 @@ passwd="자신의 saint비번"
 *사실은... 패키지로 만들고 싶었는데.. 그건 좀 더 노력을 해보는 것으로...*  
 *git clone을 한다거나... 한다거나...ㅎ......*  
 
-example.py 에다가 자신의 access_token[^1] 을 입력하면 끝~     
+example.py 에다가 자신의 access_token[^1] 을 입력하면 끝~  
 **example.py**  
 ```
 from notice import my_notice
@@ -43,8 +43,8 @@ gp.run()
 ---
 #### Background 실행
   
-nohup 명령어로 시도하다가 importerror가 계속발생 - 망
-실행파일로 바꿔도 importerror가 계속발생
+nohup 명령어로 시도하다가 importerror가 계속발생 - 망  
+실행파일로 바꿔도 importerror가 계속발생  
 *어떻게 해야할까 ㅠㅠㅠㅠㅠㅠ*    
 
 #### Import Problem
