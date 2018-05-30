@@ -47,6 +47,8 @@ nohup 명령어로 시도하다가 importerror가 계속발생 - 망
 실행파일로 바꿔도 importerror가 계속발생  
 *어떻게 해야할까 ㅠㅠㅠㅠㅠㅠ*    
 
+>nohup 명령어 없이 그냥 맨 뒤에 &를 붙임으로써 해결. nohup으로 하면 환경변수가
+>바뀌나...?
 #### Import Problem
 
 vi ~/.bash_profile 
